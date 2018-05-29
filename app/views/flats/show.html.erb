@@ -1,0 +1,44 @@
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <p></p>
+  </div>
+</div>
+<div class="container" id="show-flats">
+
+<div class="row">
+  <div class="col-8">
+    <div class="white-card">
+      <h2> <%= @flat.name  %> </h2>
+      <p><%= @flat.address  %></p>
+    </div>
+    <div class="white-card">
+      <h4><strong><%= "A bit more about this flat..."  %></strong></h4>
+      <p><%= @flat.description  %></p>
+      <div id="map" style="height: 300px; width: 600px"></div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="white-card">
+      <p>Book flat</p>
+    </div>
+    <div class="white-card">
+      <p>Details</p>
+      <div class="footer-links">
+        <p><i class="fas fa-dollar-sign"></i><%= @flat.price_per_night %></p>
+        <p><i class="fas fa-users"></i><%= @flat.number_of_guests  %></p>
+      </div>
+    </div>
+    <div class="white-card">
+      <p>Share</p>
+      <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+    </div>
+  </div>
+</div></div>
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+      <script src="build/application.js"></script>
